@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+
 //Faz um Check point do jogo.
 void salvarArquivo(bool matriz2, int matriz){
 	int i, j;
@@ -38,8 +39,11 @@ bool matriz2[4][4] = {false, false, true, false,
 					
 do{
 	//mostra a matriz (Jogo) e os itens que ja foram encontrados
+printf ("     0   1   2   3\n");
 	for (i = 0; i < 4; i++){
+		printf (" %i ", i);
 			for(j = 0; j < 4; j++){
+				
 				printf ("|");
 				if(matriz2[i][j] == false){
 				printf (" %i ", matriz[i][j]);
@@ -47,11 +51,10 @@ do{
 					// Se o item nao foi encontrado mostra ~ no lugar dele
 					printf (" ~ ");
 				}
-				
 			}
-			
 			printf ("\n");
 		}
+
 	//parte em que o jogador digita a posicao do item que ele acha que encontrou
 	printf ("linha (0 - 3), coluna (0 - 3), valor (0 - 4):\n");
 	printf ("linha: \n");
