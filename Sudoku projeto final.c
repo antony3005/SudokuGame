@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-// Função para salvar o progresso
+// FunÃ§Ã£o para salvar o progresso
 void salvarArquivo(int matriz2[4][4], int matriz[4][4]) {
 	int i, j;
     FILE *arquivo = fopen("sudoku.txt", "w");
@@ -20,7 +20,7 @@ void salvarArquivo(int matriz2[4][4], int matriz[4][4]) {
     fclose(arquivo);
 }
 
-// Função para carregar o progresso
+// FunÃ§Ã£o para carregar o progresso
 void carregarArquivo(int matriz2[4][4], int matriz[4][4]) {
 	int i, j;
     FILE *arquivo = fopen("sudoku.txt", "r");
@@ -42,10 +42,10 @@ void carregarArquivo(int matriz2[4][4], int matriz[4][4]) {
     fclose(arquivo);
 }
 
-// Função principal do jogo
+// FunÃ§Ã£o principal do jogo
 void jogar(int matriz[4][4], int matriz2[4][4]) {
 	int i, j;
-    int vidas = 5;
+    int vidas = 3;
     int l, m, v;
     int num = 0;
 
@@ -160,7 +160,7 @@ int main() {
                 break;
 
             default:
-                printf("Opçao invalida!\n");
+                printf("OpÃ§ao invalida!\n");
                 break;
         }
     } while (opcao != 3);
